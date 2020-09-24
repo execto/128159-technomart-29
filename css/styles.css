@@ -1,0 +1,432 @@
+:root {
+    --light-font-color: #FFFFFF;
+    --dark-font-color: #000000;
+    --muted-font-color: #A9A9A9;
+
+    --basic-red: #EE3643;
+    --basic-red-hover: #CA2C37;
+    --basic-gray: #32425C;
+    --basic-gray-light: #C5C5C5;
+    --basic-gray-dark: #293449;
+    --basic-green: #63A63E;
+    --basic-green-dark: #518534;
+    --special-yellow: #FFBF47;
+    --special-yellow-light: #FFD180;
+    --special-blue: #3BBCE3;
+    --special-lilac: #DC91D8;
+    --special-green-light: #8ED78F;
+
+    --success-color: #5FBB2D;
+    --warning-color: #FFBF47;
+    --error-color: #BA2732;
+
+    --basic-background: #F1F5F7;
+    --gray-background-dark: #F9F5F0; 
+
+    --link-active-dark-background: #161D29;
+    --main-nav-link-active-background: #1D2739;
+
+    --promo-card-button-background: rgba(255, 255, 255, 0.3);
+    --promo-card-button-background-hover: rgba(197, 197, 197, 0.3);
+    --promo-card-button-background-active: rgba(169, 169, 169, 0.3);
+}
+
+body { 
+    margin: 0;
+    font-family: 'Cuprum', Arial, sans-serif;
+}
+
+img { 
+    max-width: 100%;
+    height: auto;
+}
+
+a { 
+    text-decoration: none 
+}
+
+/* Общие стили */
+
+.light-link {
+    color: var(--light-font-color);
+}
+
+.description-text {
+    color: var(--dark-font-color);
+
+    font-family: 'PT Sans';
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.second-header {
+    color: var(--dark-font-color);
+
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.button {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.red-button {
+    color: var(--light-font-color);
+    background-color: var(--basic-red);
+
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.red-button:hover {
+    background-color: var(--basic-red-hover);
+}
+
+.red-button:active {
+    background-color: var(--error-color);
+}
+
+/* Стили хедера */
+
+.header {
+    background-color: var(--basic-background);
+}
+
+/* Стили верхней части хедера */
+
+.header-top {
+    background-color: var(--basic-gray-dark);
+}
+
+.bookmark-link:active,
+.cart-link:active {
+    background-color: var(--link-active-dark-background);
+}
+
+.order-pay-link {
+    background-color: var(--basic-green);
+}
+
+.order-pay-link:hover {
+    background-color: var(--success-color);
+}
+
+/* Стили средней части хэдера */
+
+.market-description {
+    color: var(--basic-red);
+
+    font-style: italic;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.header-market-tel {
+    color: var(--basic-red);
+
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+}
+
+.header-marker-address {
+    color: var(--basic-gray);
+
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.enter-button {
+    color: var(--dark-font-color);
+    background-color: #ffffff;
+}
+
+.enter-button:hover,
+.registr-button:hover {
+    color: var(--basic-red);
+}
+
+.enter-button:active,
+.registr-button:active {
+    color: var(--basic-gray-light);
+}
+
+.registr-button {
+    color: var(--dark-font-color);
+    background-color: #ffffff;
+}
+
+/* Стили главной навигации */
+
+.main-nav {
+    background-color: var(--basic-gray);
+}
+
+.main-nav ul {
+    list-style: none;
+}
+
+.main-nav-item a {
+    color: var(--light-font-color);
+}
+
+.main-nav-item a:hover {
+    background-color: var(--basic-gray-dark);
+}
+
+.main-nav-item a:active {
+    background-color: var(--main-nav-link-active-background);
+}
+
+/* Стили промо */
+
+.promo-cards {
+    list-style: none;
+}
+
+.promo-card-header {
+    color: var(--light-font-color);
+
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.promo-card-button {
+    color: var(--light-font-color);
+    background-color: var(--promo-card-button-background);
+
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.promo-card-button:hover {
+    background-color: var(--promo-card-button-background-hover);
+}
+
+.promo-card-button:active {
+    background-color: var(--promo-card-button-background-active);
+}
+
+/* Стили промо карточек */
+
+.material-card {
+    background-color: #FFBF47;
+}
+
+.build-tools-card {
+    background-color: #3BBCE3;
+}
+
+.technics-card {
+    background-color: #DC91D8;
+}
+
+.discount-card {
+    background-color: #8ED78F;
+}
+
+.delivery-card {
+    background-color: #FFC047;
+}
+
+/* Стили промо слайдера */
+
+.promo-slider {
+    background-color: var(--basic-background);
+}
+
+.promo-slider-header-section {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.promo-slieder-header {
+    color: var(--light-font-color);
+
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.promo-slider-description {
+    color: var(--light-font-color);
+
+    font-size: 18px;
+    line-height: 24px;
+}
+
+/* Стили хедера секций */
+
+.section-header {
+    background-color: var(--gray-background-dark);
+}
+
+.section-header-text {
+    color: var(--basic-gray);
+
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+/* Стили карточки товара */
+
+.product-card {
+    font-family: 'PT Sans';
+    font-weight: bold;
+}
+
+.product-card-header {
+    color: var(--dark-font-color);
+
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.product-card-old-price {
+    color: var(--muted-font-color);
+
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.product-card-price {
+    color: var(--light-font-color);
+    background-color: var(--basic-red);
+
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.product-card-buttons {
+    font-family: 'Cuprum';
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.product-buy-button {
+    color: var(--light-font-color);
+    background-color: var(--basic-green);
+}
+
+.product-buy-button:hover {
+    background-color: var(--success-color);
+}
+
+.product-buy-button:active {
+    background-color: var(--basic-green-dark);
+}
+
+.to-bookmark-button {
+    color: var(--basic-gray);
+}
+
+/* Стили раздела сервисов */
+
+.services {
+    background-color: var(--basic-background);
+}
+
+.services-header {
+    color: var(--dark-font-color);
+
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.services-list dt {
+    font-size: 21px;
+    line-height: 30px;
+}
+
+.services-list dt {
+    color: var(--light-font-color);
+    background-color: var(--basic-gray);
+}
+
+.services-list dt:hover {
+    color: var(--light-font-color);
+    background-color: var(--basic-gray-dark);
+}
+
+.services-list .current {
+    color: var(--basic-gray);
+    background-color: white;
+}
+
+.services-list-item-description h3 {
+    color: var(--basic-gray);
+
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+/* Стили раздела Компания Техномарт */
+
+.transport-companies-list {
+    list-style: none;
+}
+
+.transport-companies-list li {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+/* Стили футера */
+
+.footer-top-section {
+    background-color: var(--basic-gray);
+}
+
+.footer-contacts,
+.footer-contacts a {
+    color: var(--light-font-color);
+
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.footer-nav-link {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.footer-nav-link:hover {
+    text-decoration: underline;
+}
+
+.footer-nav-link:active {
+    opacity: 0.5;
+}
+
+.footer-light-link {
+    color: var(--basic-background);
+}
+
+.footer-yellow-link {
+    color: var(--special-yellow-light)
+}
+
+.footer-bottom-section {
+    color: var(--light-font-color);
+    background-color: var(--basic-gray-dark);
+}
+
+.copyrights {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.red-active-link:active {
+    color: var(--basic-red);
+    text-decoration: none;
+    opacity: 1;
+}
