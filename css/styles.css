@@ -154,6 +154,12 @@ a {
   text-transform: capitalize;
 }
 
+.container {
+  min-width: 940px;
+  width: 940px;
+  margin: 0 auto;
+}
+
 /* Стили хедера */
 
 .header {
@@ -164,6 +170,11 @@ a {
 
 .header-top {
   background-color: var(--basic-gray-dark);
+}
+
+.header-top-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content max-content max-content;
 }
 
 .bookmark-link:active,
@@ -185,12 +196,24 @@ a {
 
 /* Стили средней части хэдера */
 
+.header-middle {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .market-description {
   color: var(--basic-red);
 
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
+
+  justify-self: left;
+}
+
+.header-contacts {
+  justify-self: center;
+  text-align: center;
 }
 
 .header-market-tel {
@@ -206,6 +229,10 @@ a {
 
   font-size: 14px;
   line-height: 24px;
+}
+
+.header-profile-buttons {
+  justify-self: right;
 }
 
 .enter-button,
@@ -248,8 +275,35 @@ a {
 
 /* Стили промо */
 
-.promo-cards {
-  list-style: none;
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(3, min-content);
+  gap: 20px;
+  grid-template-areas: 
+    "first-card second-card third-card"
+    "promo-slider promo-slider fourth-card"
+    "promo-slider promo-slider fifth-card";
+}
+
+.first-card {
+  grid-area: first-card;
+}
+
+.second-card {
+  grid-area: second-card;
+}
+
+.third-card {
+  grid-area: third-card;
+}
+
+.fourth-card {
+  grid-area: fourth-card;
+}
+
+.fifth-card {
+  grid-area: fifth-card;
 }
 
 .promo-card-header {
@@ -303,6 +357,7 @@ a {
 
 .promo-slider {
   background-color: var(--basic-background);
+  grid-area: promo-slider;
 }
 
 .promo-slider-header-section {
@@ -326,6 +381,10 @@ a {
 }
 
 /* Стили хедера секций */
+.section-header-grid {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
 
 .section-header {
   background-color: var(--gray-background-dark);
@@ -341,6 +400,14 @@ a {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+/* Грид популярных товаров */
+
+.popular-goods-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
 }
 
 /* Стили карточки товара */
@@ -400,8 +467,25 @@ a {
   color: var(--muted-font-color);
 }
 
+/* Стили раздела популярных производителей */
+
+.popular-manufacturers-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
 
 /* Стили раздела сервисов */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, auto);
+  column-gap: 20px;
+}
 
 .services {
   background-color: var(--basic-background);
@@ -410,9 +494,23 @@ a {
 .services-header {
   color: var(--dark-font-color);
 
+  grid-area: 1 / 1 / 2 / 3;
+
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.services .description-text {
+  grid-area: 2 / 1 / 3 / 7;
+}
+
+.services-list {
+  grid-area: 3 / 1 / 5 / 9;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
 }
 
 .services-list dt {
@@ -445,6 +543,11 @@ a {
 
 /* Стили раздела Компания Техномарт */
 
+.company-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
 .transport-companies-list {
   list-style: none;
 }
@@ -456,8 +559,18 @@ a {
 
 /* Стили футера */
 
+.footer-top-section-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
 .footer-top-section {
   background-color: var(--basic-gray);
+}
+
+.footer-logo {
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 .footer-contacts,
@@ -466,6 +579,12 @@ a {
 
   font-size: 18px;
   line-height: 24px;
+
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.footer-nav {
+  grid-area: 1 / 2 / 3 / 3;
 }
 
 .footer-nav-link {
@@ -492,6 +611,11 @@ a {
 .footer-bottom-section {
   color: var(--light-font-color);
   background-color: var(--basic-gray-dark);
+}
+
+.footer-bottom-section-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content max-content;
 }
 
 .copyrights {
